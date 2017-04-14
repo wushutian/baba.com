@@ -1,0 +1,137 @@
+
+.walker{
+    width:320px;
+    height:480px;
+    position:fixed;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.fadeInLong1 {
+  -webkit-animation: fadeIn 5s ease 0s 1 both;
+  -ms-animation: fadeIn 5s ease 0s 1 both;
+  -moz-animation: fadeIn 5s ease 0s 1 both;
+  -o-animation: fadeIn 5s ease 0s 1 both;
+          animation: fadeIn 5s ease 0s 1 both;
+          background:url(../img/001.jpg) no-repeat center center / cover;
+}
+.fadeOutLong1 {
+  -webkit-animation: fadeOut 5s ease 0s 1 both;
+  -ms-animation: fadeOut 5s ease 0s 1 both;
+  -moz-animation: fadeOut 5s ease 0s 1 both;
+  -o-animation: fadeOut 5s ease 0s 1 both;
+          animation: fadeOut 5s ease 0s 1 both;
+          background:url(../img/001-1.jpg) no-repeat center center / cover;
+}
+
+
+.fadeInLong2 {
+  -webkit-animation: fadeIn 5s ease 0s 1 both;
+  -ms-animation: fadeIn 5s ease 0s 1 both;
+  -moz-animation: fadeIn 5s ease 0s 1 both;
+  -o-animation: fadeIn 5s ease 0s 1 both;
+          animation: fadeIn 5s ease 0s 1 both;
+          background:url(../img/002.jpg) no-repeat center center / cover;
+}
+.fadeOutLong2 {
+  -webkit-animation: fadeOut 5s ease 0s 1 both;
+  -ms-animation: fadeOut 5s ease 0s 1 both;
+  -moz-animation: fadeOut 5s ease 0s 1 both;
+  -o-animation: fadeOut 5s ease 0s 1 both;
+          animation: fadeOut 5s ease 0s 1 both;
+          background:url(../img/002-1.jpg) no-repeat center center / cover;
+}
+.fadeInLong3 {
+  -webkit-animation: fadeIn 5s ease 0s 1 both;
+  -ms-animation: fadeIn 5s ease 0s 1 both;
+  -moz-animation: fadeIn 5s ease 0s 1 both;
+  -o-animation: fadeIn 5s ease 0s 1 both;
+          animation: fadeIn 5s ease 0s 1 both;
+          background:url(../img/003.jpg) no-repeat center center / cover;
+}
+.fadeOutLong3 {
+  -webkit-animation: fadeOut 5s ease 0s 1 both;
+  -ms-animation: fadeOut 5s ease 0s 1 both;
+  -moz-animation: fadeOut 5s ease 0s 1 both;
+  -o-animation: fadeOut 5s ease 0s 1 both;
+          animation: fadeOut 5s ease 0s 1 both;
+          background:url(../img/003-1.jpg) no-repeat center center / cover;
+}
+.fadeInLong4 {
+  -webkit-animation: fadeIn 5s ease 0s 1 both;
+  -ms-animation: fadeIn 5s ease 0s 1 both;
+  -moz-animation: fadeIn 5s ease 0s 1 both;
+  -o-animation: fadeIn 5s ease 0s 1 both;
+          animation: fadeIn 5s ease 0s 1 both;
+          background:url(../img/004.jpg) no-repeat center center / cover;
+}
+.fadeOutLong4 {
+  -webkit-animation: fadeOut 5s ease 0s 1 both;
+  -ms-animation: fadeOut 5s ease 0s 1 both;
+  -moz-animation: fadeOut 5s ease 0s 1 both;
+  -o-animation: fadeOut 5s ease 0s 1 both;
+          animation: fadeOut 5s ease 0s 1 both;
+          background:url(../img/004-1.jpg) no-repeat center center / cover;
+}
+.fadeInLong5 {
+  -webkit-animation: fadeIn 5s ease 0s 1 both;
+  -ms-animation: fadeIn 5s ease 0s 1 both;
+  -moz-animation: fadeIn 5s ease 0s 1 both;
+  -o-animation: fadeIn 5s ease 0s 1 both;
+          animation: fadeIn 5s ease 0s 1 both;
+          background:url(../img/005.jpg) no-repeat center center / cover;
+}
+.fadeOutLong5 {
+  -webkit-animation: fadeOut 5s ease 0s 1 both;
+  -ms-animation: fadeOut 5s ease 0s 1 both;
+  -moz-animation: fadeOut 5s ease 0s 1 both;
+  -o-animation: fadeOut 5s ease 0s 1 both;
+          animation: fadeOut 5s ease 0s 1 both;
+          background:url(../img/005-1.jpg) no-repeat center center / cover;
+}
+
+
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
