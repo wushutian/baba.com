@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <title>HTML5 3D图片折叠特效在线演示</title>
-
-    <style>
 body{
   background:#e0e0e0;
 }
@@ -141,7 +131,10 @@ body{
   line-height:2.5em;
 }
 
-
+.container:nth-child(1){
+  transform-origin:right;
+  transform:rotateY(-35deg);
+}
 
 .container:nth-child(1) .label{
   background:#005eff;
@@ -154,38 +147,8 @@ body{
 .container:nth-child(3) .label{
   background:#31dd96;
 }
-.container:nth-child(4) .label{
-  background:#31dd96;
+
+.container:nth-child(3){
+  transform-origin:left;
+  transform:rotateY(35deg);
 }
-.container:nth-child(5) .label{
-  background:#31dd96;
-}
-.container:nth-child(6) .label{
-  background:#31dd96;
-}
-
-
-</style>
-
-  <script src="js/prefixfree.min.js"></script>
-
-</head>
-
-<body>
-
-  <div id="gallery">
-      <img src="Paysage_de_Chine_3.jpg" alt="Landscape" />
-	  <img src="Paysage_de_Chine_3.jpg" alt="Landscape" />
-	  <img src="Paysage_de_Chine_3.jpg" alt="Landscape" />
-  <img src="veggies.jpg" alt="Vegetables" />
-  <img src="1.jpg" alt="Landscape1" />
-  <img src="Chewbacca.jpg" alt="Chewbacca" />
-   
-</div>
-
- 
-  <script src="js/index.js"></script>
-
-</body>
-
-</html>
