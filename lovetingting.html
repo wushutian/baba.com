@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lovebaba</title>
+<meta name="description" content="" />
+
+</head>
+
+<body>
+<!-- 打字机效果-->		
+		<!--导库-->
+<link rel="stylesheet" href="js/style.css" type="text/css" media="all">
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/player.css">
+<link rel="stylesheet" type="text/css" href="css/hexagons.css">
+<link rel="stylesheet" type="text/css" href="css/lanren.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/text.js"></script>
+<!-- 显示时间 -->
+<script type="text/javascript" src="js/time.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<style type="text/css">
+#contentDiv{
+position:relative;
+width:100%;
+height:100%;
+}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+.music_wrap{    position: absolute;
+    right:1%;
+    top: -43px;
+	}
+.volume{
+    margin-top: -1px;
+	}	
+#loveHeart{
+  position: absolute;
+  left:35%;
+  top:20px;
+  
+}
+#garden{
+width:500px!important;
+height:500px!important;
+}
+#time {
+    left: 15%;
+    top: 25%;
+  
+}
+#myContent{
+top:50px;
+}
+#nice_picture{
+ position: absolute;
+ width:100%;
+ top:55%;
+ left:2%;
+}
+
+</style>
+<div id="contentDiv">
+  <canvas id="sakura"></canvas>
+  		<div class="music_wrap">
+		<div class="artist_info">
+			<div class="artist_avatar">
+				<img />
+			</div>
+			<div class="artist">Artist</div>
+			<div class="artist_name">歌手</div>
+		</div>
+
+		<div class="track">
+			<div class="music_name">歌曲</div>
+			<div class="music_album">专辑</div>
+		</div>
+
+		<div class="control">
+			<div class="option">
+				<div class="time">-00:00</div>
+				<div class="volume" title="音量">
+					<p>&#xe604;</p>
+				</div>
+				<div class="volume_wrap hidden">
+					<div class="volume_bar">
+						<div class="volume_now"></div>
+					</div>
+				</div>
+				<ul id="option_list">
+					<li class="repeat" title="单曲循环">&#xe609;</li>
+					<li class="shuffle" title="随机播放">&#xe608;</li>
+					<li class="list" title="列表循环">&#xe606;</li>
+				</ul>
+			</div>
+
+			<div class="progress_bar" id="bar">
+				<div class="progress"></div>
+				<div class="buffer"></div>
+			</div>
+
+			<div class="action_button">
+				<div class="prev" title="上一首">&#xe60d;</div>
+				<div class="play" title="播放" id="play">&#xe60a;</div>
+				<div class="pause hidden" title="暂停">&#xe60b;</div>
+				<div class="next" title="下一首">&#xe60c;</div>
+			</div>
+		</div>
+  
+  </div>
+  	<!-- #myContent -->
+		<div id="myContent">
+				<span id="blink" style="display: none;">_</span></div>
+		<div id="contentToWrite" style="display:none">		    					
+			见到你的时候，多希望时间能多停留一秒钟，<br>
+				那你就能多陪我一秒钟。<br>
+				我知道，我已经爱上了你。<br>
+				不管你面临多大的压力，<br>
+				不管你前面的路如何崎岖，<br>
+				不管你经历过什么，<br>
+				我都希望能在你身边看着你，陪着你，一起度过。<br>
+				无论你在何时，无论你在何处，无论你做什么；请记住,<br>
+				我永远支持你，无时无刻不想着你。<br>
+				我并不优秀，但是请相信我，我并不是一无是处。<br>
+				希望你能给我个机会走进你内心，接受我。<br>
+				我不会唱歌，不会跳舞，也不会玩，但是我有我的浪漫方式，<br>
+				陪着你吃，陪着你玩，是我最高兴的事情。<br>
+				这辈子最疯狂的事，就是爱上了你，<br>				
+				最大的希望，就是有你陪我疯一辈子。     <br>
+				这辈子，下辈子，下下辈子，我都希望有你在身边。<br>
+				我希望我们未来的故事，就像→_→右边的计时器，<br>
+				一直持续到永远，直至数据溢出。<br>
+				婷婷，你能接受我吗？<br>				
+				-----------------------Just for You, 黄婷婷<br>
+		</div>
+		<script type="text/javascript">
+			writeContent(true);
+		</script>
+		
+	
+
+		<audio id="audio">
+			
+		</audio>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<!-- #time -->
+		<div id="time">
+			<span id="show"></span>
+			<script type="text/javascript">
+				setTimeout("showTime()", 54000);
+			</script>
+		</div>
+		</div>
+    	<div id="nice_picture">
+		<ul id="hexGrid">
+		<li class="hex" id="imgli1" style="display:none;">
+			<a class="hexIn" href="#">
+			    <div id="imgt1" ></div>
+	            <div id="imgt11" ></div>
+				<h1>休闲的婷婷</h1>
+				<p>天气冷了记得多穿点~~~</p>
+			</a>
+		</li>
+		<li class="hex" id="imgli2" style="display:none;">
+			<a class="hexIn" href="#">
+				<div id="imgt2"></div>
+	            <div id="imgt22"></div>
+				<h1>强行卖萌的婷婷</h1>
+				<p>我都想上去咬一口了！！！</p>
+			</a>
+		</li>
+		<li class="hex" id="imgli3" style="display:none;">
+			<a class="hexIn" href="#">
+			    <div id="imgt3"></div>
+	            <div id="imgt33"></div>
+				<h1>调皮的爸爸</h1>
+				<p>看这八字眉，哈哈哈小朋友样子的爸爸也是很可爱滴！！！</p>
+			</a>
+		</li>
+			
+		<li class="hex" id="imgli4" style="display:none;">
+			<a class="hexIn" href="#">
+				<div id="imgt4"></div>
+	            <div id="imgt44"></div>
+				<h1>邻家女孩的婷婷</h1>
+				<p>看起来就很想让人亲近，我最喜欢的照片之一，爱你！！！</p>
+			</a>
+         </li>
+        <li class="hex" id="imgli5" style="display:none;">
+			<a class="hexIn" href="#">
+			    <div id="imgt5"></div>
+	            <div id="imgt55"></div>
+				<h1>成熟范的婷婷</h1>
+				<p>这是我心中的女神样子，完美！！！</p>
+			</a>
+		</li>
+</ul>
+		
+		</div>    
+
+		</div>
+		
+<script>
+
+setTimeout(function () {
+  
+		$("#imgli1").css("display","block");$("#imgt1").addClass("fadeInLong1 walker");$("#imgt11").addClass("fadeOutLong1 walker");
+	}, 10000);
+setTimeout(function () {
+			$("#imgli2").css("display","block");$("#imgt2").addClass("fadeInLong2 walker");$("#imgt22").addClass("fadeOutLong2 walker");
+	}, 25000);
+setTimeout(function () {
+			$("#imgli3").css("display","block");$("#imgt3").addClass("fadeInLong3 walker");$("#imgt33").addClass("fadeOutLong3 walker");
+	}, 40000);
+setTimeout(function () {
+			$("#imgli4").css("display","block");$("#imgt4").addClass("fadeInLong5 walker");$("#imgt44").addClass("fadeOutLong5 walker");
+	}, 55000);
+setTimeout(function () {
+			$("#imgli5").css("display","block");$("#imgt5").addClass("fadeInLong4 walker");$("#imgt55").addClass("fadeOutLong4 walker");
+	}, 70000);
+	
+</script>	
+<!-- sakura shader -->
+<script id="sakura_point_vsh" type="x-shader/x_vertex">
+uniform mat4 uProjection;
+uniform mat4 uModelview;
+uniform vec3 uResolution;
+uniform vec3 uOffset;
+uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+attribute vec3 aPosition;
+attribute vec3 aEuler;
+attribute vec2 aMisc; //x:size, y:fade
+
+varying vec3 pposition;
+varying float psize;
+varying float palpha;
+varying float pdist;
+
+//varying mat3 rotMat;
+varying vec3 normX;
+varying vec3 normY;
+varying vec3 normZ;
+varying vec3 normal;
+
+varying float diffuse;
+varying float specular;
+varying float rstop;
+varying float distancefade;
+
+void main(void) {
+    // Projection is based on vertical angle
+    vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
+    gl_Position = uProjection * pos;
+    gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
+
+    pposition = pos.xyz;
+    psize = aMisc.x;
+    pdist = length(pos.xyz);
+    palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
+
+    vec3 elrsn = sin(aEuler);
+    vec3 elrcs = cos(aEuler);
+    mat3 rotx = mat3(
+        1.0, 0.0, 0.0,
+        0.0, elrcs.x, elrsn.x,
+        0.0, -elrsn.x, elrcs.x
+    );
+    mat3 roty = mat3(
+        elrcs.y, 0.0, -elrsn.y,
+        0.0, 1.0, 0.0,
+        elrsn.y, 0.0, elrcs.y
+    );
+    mat3 rotz = mat3(
+        elrcs.z, elrsn.z, 0.0, 
+        -elrsn.z, elrcs.z, 0.0,
+        0.0, 0.0, 1.0
+    );
+    mat3 rotmat = rotx * roty * rotz;
+    normal = rotmat[2];
+
+    mat3 trrotm = mat3(
+        rotmat[0][0], rotmat[1][0], rotmat[2][0],
+        rotmat[0][1], rotmat[1][1], rotmat[2][1],
+        rotmat[0][2], rotmat[1][2], rotmat[2][2]
+    );
+    normX = trrotm[0];
+    normY = trrotm[1];
+    normZ = trrotm[2];
+
+    const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
+
+    float tmpdfs = dot(lit, normal);
+    if(tmpdfs < 0.0) {
+        normal = -normal;
+        tmpdfs = dot(lit, normal);
+    }
+    diffuse = 0.4 + tmpdfs;
+
+    vec3 eyev = normalize(-pos.xyz);
+    if(dot(eyev, normal) > 0.0) {
+        vec3 hv = normalize(eyev + lit);
+        specular = pow(max(dot(hv, normal), 0.0), 20.0);
+    }
+    else {
+        specular = 0.0;
+    }
+
+    rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
+    rstop = pow(rstop, 0.5);
+    //-0.69315 = ln(0.5)
+    distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
+}
+</script>
+<script id="sakura_point_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+
+uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+const vec3 fadeCol = vec3(0.08, 0.03, 0.06);
+
+varying vec3 pposition;
+varying float psize;
+varying float palpha;
+varying float pdist;
+
+//varying mat3 rotMat;
+varying vec3 normX;
+varying vec3 normY;
+varying vec3 normZ;
+varying vec3 normal;
+
+varying float diffuse;
+varying float specular;
+varying float rstop;
+varying float distancefade;
+
+float ellipse(vec2 p, vec2 o, vec2 r) {
+    vec2 lp = (p - o) / r;
+    return length(lp) - 1.0;
+}
+
+void main(void) {
+    vec3 p = vec3(gl_PointCoord - vec2(0.5, 0.5), 0.0) * 2.0;
+    vec3 d = vec3(0.0, 0.0, -1.0);
+    float nd = normZ.z; //dot(-normZ, d);
+    if(abs(nd) < 0.0001) discard;
+
+    float np = dot(normZ, p);
+    vec3 tp = p + d * np / nd;
+    vec2 coord = vec2(dot(normX, tp), dot(normY, tp));
+
+    //angle = 15 degree
+    const float flwrsn = 0.258819045102521;
+    const float flwrcs = 0.965925826289068;
+    mat2 flwrm = mat2(flwrcs, -flwrsn, flwrsn, flwrcs);
+    vec2 flwrp = vec2(abs(coord.x), coord.y) * flwrm;
+
+    float r;
+    if(flwrp.x < 0.0) {
+        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
+    }
+    else {
+        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
+    }
+
+    if(r > rstop) discard;
+
+    vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
+    float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
+    col *= vec3(1.0, grady, grady);
+    col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
+    col = col * diffuse + specular;
+
+    col = mix(fadeCol, col, distancefade);
+
+    float alpha = (rstop > 0.001)? (0.5 - r / (rstop * 2.0)) : 1.0;
+    alpha = smoothstep(0.0, 1.0, alpha) * palpha;
+
+    gl_FragColor = vec4(col * 0.5, alpha);
+}
+</script>
+<!-- effects -->
+<script id="fx_common_vsh" type="x-shader/x_vertex">
+uniform vec3 uResolution;
+attribute vec2 aPosition;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+}
+</script>
+<script id="bg_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+
+uniform vec2 uTimes;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    vec3 col;
+    float c;
+    vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
+    c = exp(-pow(length(tmpv) * 1.8, 2.0));
+    col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);
+    gl_FragColor = vec4(col * 0.5, 1.0);
+}
+</script>
+<script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    vec4 col = texture2D(uSrc, texCoord);
+    gl_FragColor = vec4(col.rgb * 2.0 - vec3(0.5), 1.0);
+}
+</script>
+<script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    vec4 col = texture2D(uSrc, texCoord);
+    col = col + texture2D(uSrc, texCoord + uBlurDir.xy * uDelta);
+    col = col + texture2D(uSrc, texCoord - uBlurDir.xy * uDelta);
+    col = col + texture2D(uSrc, texCoord + (uBlurDir.xy + uBlurDir.zw) * uDelta);
+    col = col + texture2D(uSrc, texCoord - (uBlurDir.xy + uBlurDir.zw) * uDelta);
+    gl_FragColor = col / 5.0;
+}
+</script>
+<!-- effect fragment shader template -->
+<script id="fx_common_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    gl_FragColor = texture2D(uSrc, texCoord);
+}
+</script>
+<!-- post processing -->
+<script id="pp_final_vsh" type="x-shader/x_vertex">
+uniform vec3 uResolution;
+attribute vec2 aPosition;
+varying vec2 texCoord;
+varying vec2 screenCoord;
+void main(void) {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+}
+</script>
+<script id="pp_final_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform sampler2D uBloom;
+uniform vec2 uDelta;
+varying vec2 texCoord;
+varying vec2 screenCoord;
+void main(void) {
+    vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
+    vec4 bloomcol = texture2D(uBloom, texCoord);
+    vec4 col;
+    col = srccol + bloomcol * (vec4(1.0) + srccol);
+    col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);
+    col = pow(col, vec4(0.45454545454545)); //(1.0 / 2.2)
+
+    gl_FragColor = vec4(col.rgb, 1.0);
+    gl_FragColor.a = 1.0;
+}
+</script>
+
+  <script src="js/index.js"></script>
+
+
+		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/player.js"></script>
+		
+		<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2013, 2, 28);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 49000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+	
+}
+
+</script>
+</body>
+
+</html>
